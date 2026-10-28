@@ -1,0 +1,26 @@
+[package]
+name = "file-retrieval-engine"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "file-retrieval-client"
+path = "src/file-retrieval-client.rs"
+
+[[bin]]
+name = "file-retrieval-benchmark"
+path = "src/file-retrieval-benchmark.rs"
+
+[[bin]]
+name = "file-retrieval-server"
+path = "src/file-retrieval-server.rs"
+
+[dependencies]
+tonic = "0.13"
+prost = "0.13"
+prost-types = "0.13"
+tokio = { version = "1", features = ["full"] }
+
+[build-dependencies]
+tonic-build = "0.13"
+

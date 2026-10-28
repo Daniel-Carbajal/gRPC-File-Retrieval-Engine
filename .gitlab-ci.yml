@@ -1,0 +1,14 @@
+stages:
+  - grade
+
+grade:
+  stage: grade
+  tags:
+    - homework
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+  script:
+    - bash .gitlab/setup_wrapper.sh
+    - bash .gitlab/runtest_wrapper.sh
+
+

@@ -1,0 +1,13 @@
+.vscode
+.idea
+datasets
+app-java/target
+app-cpp/build
+app-go/build
+app-go/proto/*.pb.go
+app-rust/Cargo.lock
+app-rust/target
+test/auto-grader
+test/logs
+test/traces
+test/test_driver.py
