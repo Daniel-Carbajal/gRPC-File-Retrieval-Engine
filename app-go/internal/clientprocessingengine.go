@@ -308,3 +308,12 @@ func (self *ClientProcessingEngine) Connect(serverIP string, serverPort string) 
 	// TO-DO store the client ID
 	self.clientID = regReply.GetClientId()
 }
+
+func (self *ClientProcessingEngine) Disconnect() {
+	if self.channel != nil {
+		self.channel.Close()
+	}
+
+	self.channel = nil
+	self.stub = nil
+}
