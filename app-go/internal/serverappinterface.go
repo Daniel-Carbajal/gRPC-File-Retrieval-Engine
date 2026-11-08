@@ -41,4 +41,3 @@ func (self *ServerAppInterface) ReadCommands() {
 
 	_ = reader.Err()
 }
-
